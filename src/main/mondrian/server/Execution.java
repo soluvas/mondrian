@@ -110,8 +110,7 @@ public class Execution {
      */
     public void copyMDC() {
         this.mdc.clear();
-        final Map<String, Object> currentMdc =
-            MDC.getContext();
+        final Map<String, Object> currentMdc = null;
         if (currentMdc != null) {
             this.mdc.putAll(currentMdc);
         }
@@ -123,7 +122,7 @@ public class Execution {
      * RolapResultShepherd where original MDC needs to be retrieved
      */
     public void setContextMap() {
-        final Map<String, Object> old = MDC.getContext();
+        final Map<String, Object> old = null;
         if (old != null) {
             old.clear();
             old.putAll(mdc);
